@@ -103,7 +103,6 @@ def main (args):
             if data['linkMode'] == u'linked_url':
                 fe = entries[data['parentItem']]
                 fe.link(href=data['url'], title=data['title'], rel='alternate')
-                fe.updated(datetime.now(pytz.utc))
             else:
                 raise NotImplemented('Zotero attachment (key="{0}") with unhandled linkMode="{1}"'.format(key, data['linkMode']))
         else:
